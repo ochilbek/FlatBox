@@ -1,8 +1,8 @@
-#SnowFlat
+#FlatBox
 
 ![alt tag](http://s26.postimg.org/4ncojgvgp/Flat_Box_Banner.jpg)
 
-SnowFlat is a responsive theme by [Q2A Market] for [Question2Answer] script. It has great look with flat color scheme and have many additional features which will helps your users to enjoy reading.
+FlatBox is a responsive theme by [Q2A Market] for [Question2Answer] script. It has great look with flat color scheme and have many additional features which will helps your users to enjoy reading.
 
 Features
 ========
