@@ -6,7 +6,7 @@
   Copyright (C) 2014  Q2A Market <http://www.q2amarket.com>
 
   File:           qa-theme.php
-  Version:        FlatBox 1.0.0
+  Version:        FlatBox 1.0.1
   Description:    Q2A theme class
 
   This program is free software: you can redistribute it and/or modify
@@ -32,7 +32,7 @@
  * @package qa_html_theme_base
  * @subpackage qa_html_theme
  * @category Theme
- * @since FlatBox 1.0
+ * @since FlatBox 1.0.0
  * @version 1.4
  * @author Q2A Market <http://www.q2amarket.com>
  * @copyright (c) 2014, Q2A Market

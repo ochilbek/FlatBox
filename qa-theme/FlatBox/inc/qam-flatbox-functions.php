@@ -6,7 +6,7 @@
   Copyright (C) 2014  Q2A Market <http://www.q2amarket.com>
 
   File:           inc/qam-flatbox-functions.php
-  Version:        FlatBox 1.0.0
+  Version:        FlatBox 1.0.1
   Description:    FlatBox theme supportive functions
 
   This program is free software: you can redistribute it and/or modify

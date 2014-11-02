@@ -1,0 +1,11 @@
+Changelog 1.0.1-beta
+====================
+
+- Fixed default avatr visibility issue for use account toggle on header
+- Fixed social widget account setup issue
+- Fixed custom menu items icons issue. Added default icons
+ - Pages icon for custom page
+ - Link icon for external link
+- Fixed footer link spacing issue
+- Fixed search box alignment issue
+- Other minor issues

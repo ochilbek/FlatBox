@@ -1,4 +1,5 @@
 #FlatBox
+###Version 1.0.1-beta
 
 ![alt tag](http://s26.postimg.org/4ncojgvgp/Flat_Box_Banner.jpg)
 
@@ -17,7 +18,17 @@ Features
 > If you have any issue or query, feel free to post on our support section
 > You also can create an issue on this repository
 
-More updates comming.
+Changelog 1.0.1-beta
+====================
+
+- Fixed default avatr visibility issue for use account toggle on header
+- Fixed social widget account setup issue
+- Fixed custom menu items icons issue. Added default icons
+ - Pages icon for custom page
+ - Link icon for external link
+- Fixed footer link spacing issue
+- Fixed search box alignment issue
+- Other minor issues
 
 
 [Q2A Market]: http://www.q2amarket.com

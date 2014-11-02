@@ -6,7 +6,7 @@
   Copyright (C) 2014  Q2A Market <http://www.q2amarket.com>
 
   File:           qam-flatbox-theme-options.php
-  Version:        FlatBox 1.0.0
+  Version:        FlatBox 1.0.1
   Description:    FlatBox theme customization options
 
   This program is free software: you can redistribute it and/or modify
@@ -102,6 +102,12 @@ class qam_flatbox_theme_options
             case $this->prefix . 'twitter':
                 return 'https://twitter.com/Q2AMarket';
 
+            case $this->prefix . 'twitter_widget_id':
+                return '362121220734464000';
+
+            case $this->prefix . 'twitter_id':
+                return 'Q2AMarket';
+                
             case $this->prefix . 'twitter_height':
                 return 250;
 
@@ -175,6 +181,8 @@ class qam_flatbox_theme_options
             $this->qam_opt('facebook', $this->qam_post_text('facebook'));
             $this->qam_opt('fb_height', (int) $this->qam_post_text('fb_height'));
             $this->qam_opt('twitter', $this->qam_post_text('twitter'));
+            $this->qam_opt('twitter_widget_id', $this->qam_post_text('twitter_widget_id'));
+            $this->qam_opt('twitter_by', $this->qam_post_text('twitter_by'));
             $this->qam_opt('twitter_height', (int) $this->qam_post_text('twitter_height'));
             $this->qam_opt('gplus', $this->qam_post_text('gplus'));
             $this->qam_opt('linkedin', $this->qam_post_text('linkedin'));
@@ -278,6 +286,24 @@ class qam_flatbox_theme_options
                     'type'  => 'text',
                     'value' => $this->qam_opt('twitter'),
                     'tags'  => 'NAME="' . $this->prefix . 'twitter"',
+                ),
+                array(
+                    'label' => qam_lang('twitter'),
+                    'type'  => 'text',
+                    'value' => $this->qam_opt('twitter'),
+                    'tags'  => 'NAME="' . $this->prefix . 'twitter"',
+                ),
+                array(
+                    'label' => qam_lang('twitter_widget_id'),
+                    'type'  => 'text',
+                    'value' => $this->qam_opt('twitter_widget_id'),
+                    'tags'  => 'NAME="' . $this->prefix . 'twitter_widget_id"',
+                ),
+                array(
+                    'label' => qam_lang('twitter_id'),
+                    'type'  => 'text',
+                    'value' => $this->qam_opt('twitter_id'),
+                    'tags'  => 'NAME="' . $this->prefix . 'twitter_id"',
                 ),
                 array(
                     'label' => qam_lang('twitter_height'),

@@ -5,7 +5,7 @@
     Copyright (C) 2014  Q2A Market <http://www.q2amarket.com>
 
     File:           flatbox-core-rtl.css
-    Version:        FlatBox 1.0.0
+    Version:        FlatBox 1.0.1
     Description:    FlatBox theme core stylesheet for RTL version
 
     This program is free software: you can redistribute it and/or modify
@@ -394,7 +394,7 @@ body {
   font-family: "Arial", Sans-serif;
   font-weight: 300;
   color: #333333;
-  /*overflow-x: hidden;*/
+  overflow-x: hidden;
 }
 body.body-overflow {
   overflow-y: hidden !important;
@@ -593,6 +593,11 @@ blockquote p {
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .qam-search .qa-search .qa-search-field {
+    margin: 0 0 0 -41px;
+  }
 }
 .qam-search .qa-search .qa-search-field:focus {
   border-color: #e6e6e6;
@@ -1269,12 +1274,12 @@ blockquote p {
   clear: both;
 }
 @media (min-width: 980px) {
-  .qa-nav-main .qa-nav-main-list .qa-nav-main-item {
+  .qa-nav-main .qa-nav-main-list .qa-nav-main-item, .qa-nav-main .qa-nav-main-list .qa-nav-main-item-opp {
     float: right;
     margin: 0 1px;
   }
 }
-.qa-nav-main .qa-nav-main-list .qa-nav-main-item .qa-nav-main-link {
+.qa-nav-main .qa-nav-main-list .qa-nav-main-item .qa-nav-main-link, .qa-nav-main .qa-nav-main-list .qa-nav-main-item-opp .qa-nav-main-link {
   background-color: #34495e;
   display: block;
   line-height: normal;
@@ -1283,81 +1288,87 @@ blockquote p {
   height: auto;
 }
 @media (max-width: 979px) {
-  .qa-nav-main .qa-nav-main-list .qa-nav-main-item .qa-nav-main-link {
+  .qa-nav-main .qa-nav-main-list .qa-nav-main-item .qa-nav-main-link, .qa-nav-main .qa-nav-main-list .qa-nav-main-item-opp .qa-nav-main-link {
     padding: 5px 10px;
   }
 }
 @media (min-width: 980px) {
-  .qa-nav-main .qa-nav-main-list .qa-nav-main-item .qa-nav-main-link {
+  .qa-nav-main .qa-nav-main-list .qa-nav-main-item .qa-nav-main-link, .qa-nav-main .qa-nav-main-list .qa-nav-main-item-opp .qa-nav-main-link {
     padding: 5px;
     text-align: center;
   }
 }
-.qa-nav-main .qa-nav-main-list .qa-nav-main-item .qa-nav-main-link:hover {
+.qa-nav-main .qa-nav-main-list .qa-nav-main-item .qa-nav-main-link:hover, .qa-nav-main .qa-nav-main-list .qa-nav-main-item-opp .qa-nav-main-link:hover {
   text-decoration: none;
   background: #445f7a;
 }
-.qa-nav-main .qa-nav-main-list .qa-nav-main-item .qa-nav-main-link:before {
+.qa-nav-main .qa-nav-main-list .qa-nav-main-item .qa-nav-main-link:before, .qa-nav-main .qa-nav-main-list .qa-nav-main-item-opp .qa-nav-main-link:before {
   font-family: "fontello";
   font-size: 24px;
 }
 @media (max-width: 979px) {
-  .qa-nav-main .qa-nav-main-list .qa-nav-main-item .qa-nav-main-link:before {
+  .qa-nav-main .qa-nav-main-list .qa-nav-main-item .qa-nav-main-link:before, .qa-nav-main .qa-nav-main-list .qa-nav-main-item-opp .qa-nav-main-link:before {
     display: inline-block;
     width: 24px;
     margin-left: 15px;
   }
 }
 @media (min-width: 980px) {
-  .qa-nav-main .qa-nav-main-list .qa-nav-main-item .qa-nav-main-link:before {
+  .qa-nav-main .qa-nav-main-list .qa-nav-main-item .qa-nav-main-link:before, .qa-nav-main .qa-nav-main-list .qa-nav-main-item-opp .qa-nav-main-link:before {
     display: block;
     text-align: center;
     margin-bottom: 5px;
   }
 }
-.qa-nav-main .qa-nav-main-list .qa-nav-main-item .qa-nav-main-link.qa-nav-main-selected {
+.qa-nav-main .qa-nav-main-list .qa-nav-main-item .qa-nav-main-link.qa-nav-main-selected, .qa-nav-main .qa-nav-main-list .qa-nav-main-item-opp .qa-nav-main-link.qa-nav-main-selected {
   background: #3498db;
 }
-.qa-nav-main .qa-nav-main-list .qa-nav-main-item.qa-nav-main-activity .qa-nav-main-link:before {
-  content: '\e804';
-}
-.qa-nav-main .qa-nav-main-list .qa-nav-main-item.qa-nav-main-questions .qa-nav-main-link:before {
-  content: '\e80b';
-}
-.qa-nav-main .qa-nav-main-list .qa-nav-main-item.qa-nav-main-hot .qa-nav-main-link {
-  background: #f39c12;
-}
-.qa-nav-main .qa-nav-main-list .qa-nav-main-item.qa-nav-main-hot .qa-nav-main-link:before {
-  content: '\e805';
-}
-.qa-nav-main .qa-nav-main-list .qa-nav-main-item.qa-nav-main-hot .qa-nav-main-link.qa-nav-main-selected {
-  background: #3498db;
-}
-.qa-nav-main .qa-nav-main-list .qa-nav-main-item.qa-nav-main-unanswered .qa-nav-main-link:before {
+.qa-nav-main .qa-nav-main-list .qa-nav-main-item[class^="qa-nav-main-"] .qa-nav-main-link:before, .qa-nav-main .qa-nav-main-list .qa-nav-main-item [class*="qa-nav-main-"] .qa-nav-main-link:before, .qa-nav-main .qa-nav-main-list .qa-nav-main-item-opp[class^="qa-nav-main-"] .qa-nav-main-link:before, .qa-nav-main .qa-nav-main-list .qa-nav-main-item-opp [class*="qa-nav-main-"] .qa-nav-main-link:before {
   content: '\e80c';
 }
-.qa-nav-main .qa-nav-main-list .qa-nav-main-item.qa-nav-main-tag .qa-nav-main-link:before {
-  content: '\e806';
+.qa-nav-main .qa-nav-main-list .qa-nav-main-item[class^="qa-nav-main-"] a[href*="http"].qa-nav-main-link:before, .qa-nav-main .qa-nav-main-list .qa-nav-main-item [class*="qa-nav-main-"] a[href*="http"].qa-nav-main-link:before, .qa-nav-main .qa-nav-main-list .qa-nav-main-item-opp[class^="qa-nav-main-"] a[href*="http"].qa-nav-main-link:before, .qa-nav-main .qa-nav-main-list .qa-nav-main-item-opp [class*="qa-nav-main-"] a[href*="http"].qa-nav-main-link:before {
+  content: '\e800';
 }
-.qa-nav-main .qa-nav-main-list .qa-nav-main-item.qa-nav-main-categories .qa-nav-main-link:before {
-  content: '\e808';
+.qa-nav-main .qa-nav-main-list .qa-nav-main-item.qa-nav-main-activity .qa-nav-main-link:before, .qa-nav-main .qa-nav-main-list .qa-nav-main-item-opp.qa-nav-main-activity .qa-nav-main-link:before {
+  content: '\e804';
 }
-.qa-nav-main .qa-nav-main-list .qa-nav-main-item.qa-nav-main-user .qa-nav-main-link:before {
-  content: '\e809';
+.qa-nav-main .qa-nav-main-list .qa-nav-main-item.qa-nav-main-questions .qa-nav-main-link:before, .qa-nav-main .qa-nav-main-list .qa-nav-main-item-opp.qa-nav-main-questions .qa-nav-main-link:before {
+  content: '\e80b';
 }
-.qa-nav-main .qa-nav-main-list .qa-nav-main-item.qa-nav-main-ask .qa-nav-main-link {
-  background: #1abc9c;
+.qa-nav-main .qa-nav-main-list .qa-nav-main-item.qa-nav-main-hot .qa-nav-main-link, .qa-nav-main .qa-nav-main-list .qa-nav-main-item-opp.qa-nav-main-hot .qa-nav-main-link {
+  background: #f39c12;
 }
-.qa-nav-main .qa-nav-main-list .qa-nav-main-item.qa-nav-main-ask .qa-nav-main-link:before {
-  content: '\e801';
+.qa-nav-main .qa-nav-main-list .qa-nav-main-item.qa-nav-main-hot .qa-nav-main-link:before, .qa-nav-main .qa-nav-main-list .qa-nav-main-item-opp.qa-nav-main-hot .qa-nav-main-link:before {
+  content: '\e805';
 }
-.qa-nav-main .qa-nav-main-list .qa-nav-main-item.qa-nav-main-ask .qa-nav-main-link.qa-nav-main-selected {
+.qa-nav-main .qa-nav-main-list .qa-nav-main-item.qa-nav-main-hot .qa-nav-main-link.qa-nav-main-selected, .qa-nav-main .qa-nav-main-list .qa-nav-main-item-opp.qa-nav-main-hot .qa-nav-main-link.qa-nav-main-selected {
   background: #3498db;
 }
-.qa-nav-main .qa-nav-main-list .qa-nav-main-item.qa-nav-main-admin .qa-nav-main-link:before {
+.qa-nav-main .qa-nav-main-list .qa-nav-main-item.qa-nav-main-unanswered .qa-nav-main-link:before, .qa-nav-main .qa-nav-main-list .qa-nav-main-item-opp.qa-nav-main-unanswered .qa-nav-main-link:before {
+  content: '\e80c';
+}
+.qa-nav-main .qa-nav-main-list .qa-nav-main-item.qa-nav-main-tag .qa-nav-main-link:before, .qa-nav-main .qa-nav-main-list .qa-nav-main-item-opp.qa-nav-main-tag .qa-nav-main-link:before {
+  content: '\e806';
+}
+.qa-nav-main .qa-nav-main-list .qa-nav-main-item.qa-nav-main-categories .qa-nav-main-link:before, .qa-nav-main .qa-nav-main-list .qa-nav-main-item-opp.qa-nav-main-categories .qa-nav-main-link:before {
+  content: '\e808';
+}
+.qa-nav-main .qa-nav-main-list .qa-nav-main-item.qa-nav-main-user .qa-nav-main-link:before, .qa-nav-main .qa-nav-main-list .qa-nav-main-item-opp.qa-nav-main-user .qa-nav-main-link:before {
+  content: '\e809';
+}
+.qa-nav-main .qa-nav-main-list .qa-nav-main-item.qa-nav-main-ask .qa-nav-main-link, .qa-nav-main .qa-nav-main-list .qa-nav-main-item-opp.qa-nav-main-ask .qa-nav-main-link {
+  background: #1abc9c;
+}
+.qa-nav-main .qa-nav-main-list .qa-nav-main-item.qa-nav-main-ask .qa-nav-main-link:before, .qa-nav-main .qa-nav-main-list .qa-nav-main-item-opp.qa-nav-main-ask .qa-nav-main-link:before {
+  content: '\e801';
+}
+.qa-nav-main .qa-nav-main-list .qa-nav-main-item.qa-nav-main-ask .qa-nav-main-link.qa-nav-main-selected, .qa-nav-main .qa-nav-main-list .qa-nav-main-item-opp.qa-nav-main-ask .qa-nav-main-link.qa-nav-main-selected {
+  background: #3498db;
+}
+.qa-nav-main .qa-nav-main-list .qa-nav-main-item.qa-nav-main-admin .qa-nav-main-link:before, .qa-nav-main .qa-nav-main-list .qa-nav-main-item-opp.qa-nav-main-admin .qa-nav-main-link:before {
   content: '\e80a';
 }
-.qa-nav-main .qa-nav-main-list .qa-nav-main-item.qa-nav-main- .qa-nav-main-link:before {
+.qa-nav-main .qa-nav-main-list .qa-nav-main-item.qa-nav-main- .qa-nav-main-link:before, .qa-nav-main .qa-nav-main-list .qa-nav-main-item-opp.qa-nav-main- .qa-nav-main-link:before {
   content: '\e80d';
 }
 
@@ -1457,6 +1468,19 @@ blockquote p {
 .qam-account-items-wrapper #qam-account-toggle .qam-auth-key:before {
   display: block;
   line-height: 50px;
+}
+.qam-account-items-wrapper #qam-account-toggle .qam-default-avatar {
+  background-color: #34495e;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+}
+.qam-account-items-wrapper #qam-account-toggle .qam-default-avatar .icon {
+  font-size: 38px;
+}
+.qam-account-items-wrapper #qam-account-toggle .qam-default-avatar .icon:before {
+  display: block;
+  line-height: 56px;
 }
 .qam-account-items-wrapper .qam-account-items {
   background-color: #34495e;
@@ -5934,14 +5958,17 @@ More about this license: http://www.q2amarket.com/license.php
 .qa-nav-footer .qa-nav-footer-list .qa-nav-footer-item a.qa-nav-footer-link {
   display: block;
   font-weight: normal;
-  padding: 0 0 0 5px;
+  padding: 0 5px;
   border-style: none solid none none;
-  border-width: 0 0 0 1px;
+  border-width: 0 1px 0 0;
   border-color: rgba(255, 255, 255, 0.5);
 }
-.qa-nav-footer .qa-nav-footer-list .qa-nav-footer-item a.qa-nav-footer-link:last-child {
-  border: none;
-  padding: 0;
+.qa-nav-footer .qa-nav-footer-list .qa-nav-footer-item:first-child .qa-nav-footer-link {
+  padding-right: 0;
+}
+.qa-nav-footer .qa-nav-footer-list .qa-nav-footer-item:last-child .qa-nav-footer-link {
+  border-left: none;
+  padding-left: 0;
 }
 
 @media (max-width: 479px) {

@@ -6,7 +6,7 @@
   Copyright (C) 2014  Q2A Market <http://www.q2amarket.com>
 
   File:           qam-flatbox-theme-lang.php
-  Version:        FlatBox 1.0.0
+  Version:        FlatBox 1.0.1
   Description:    FlatBox theme language key
 
   This program is free software: you can redistribute it and/or modify
@@ -40,10 +40,10 @@ return array(
      * footer columns headings
      * To change heading modify below string after =>
      */
-    'fb_like_box_heading' => 'Facebook Like Box',
-    'twitter_heading'     => 'Twitter Timeline',
-    'social_heading'      => 'Get In Touch With Us',
-    'closed_question'     => 'Closed Question',
+    'fb_like_box_heading'         => 'Facebook Like Box',
+    'twitter_heading'             => 'Twitter Timeline',
+    'social_heading'              => 'Get In Touch With Us',
+    'closed_question'             => 'Closed Question',
     /* options lang */
     'theme_direction'             => 'Use RTL',
     'ask_search_box_color'        => 'Ask and Search Box Color Scheme',
@@ -56,6 +56,8 @@ return array(
     'facebook'                    => 'Facebook Full URL (https://www.facebook.com/q2amarket)',
     'fb_height'                   => 'Like Box Height',
     'twitter'                     => 'Twitter Full URL (e.g. https://twitter.com/Q2AMarket)',
+    'twitter_widget_id'           => 'Twitter Widget ID',
+    'twitter_id'                  => 'Twitter ID for twitt by without @ (Your account name e.g. @Q2AMarket)',
     'twitter_height'              => 'Widget Height',
     'gplus'                       => 'Google Plus Profile Full URL',
     'linkedin'                    => 'LinkedIn Profile Full URL',

@@ -6,7 +6,7 @@
   Copyright (C) 2014  Q2A Market <http://www.q2amarket.com>
 
   File:           inc/qam-flatbox-theme.php
-  Version:        FlatBox 1.0.0
+  Version:        FlatBox 1.0.1
   Description:    FlatBox theme core class
 
   This program is free software: you can redistribute it and/or modify
@@ -167,7 +167,7 @@ class qam_flatbox_theme
         $this->theme        = qa_opt('site_theme');
         $this->author       = $this->qam_opt('flatbox_author', 'Q2A Market');
         $this->author_url   = $this->qam_opt('flatbox_author_url', 'http://www.q2amarket.com');
-        $this->version      = $this->qam_opt('flatbox_version', '1.0.0-beta');
+        $this->version      = $this->qam_opt('flatbox_version', '1.0.1-beta');
         $this->flatbox_version = strtolower($this->theme . '-' . $this->version);
         $this->opt_prefix   = 'qam_flatbox_';
 
@@ -338,9 +338,11 @@ class qam_flatbox_theme
                                     52, 
                                     false
             ));
-        }
+            
+            $loggedin_avatar = (is_null($tobar_avatar) && !qa_opt('default_avatar_show') ? '<div class="qam-default-avatar"><i class="icon icon-user"></i></div>' : $tobar_avatar);
+        }    
 
-        $auth_icon = qa_is_logged_in() ? strip_tags($tobar_avatar, '<img>') : '<i class="icon-key qam-auth-key"></i>';
+        $auth_icon = qa_is_logged_in() ? strip_tags($loggedin_avatar, '<img><div><i>') : '<i class="icon-key qam-auth-key"></i>';
 
         //finally return avatar with div tag
         $user_account = '<div id="qam-account-toggle" class="' .
@@ -457,8 +459,8 @@ class qam_flatbox_theme
         $fb_like_box = '<h3 class="qam-footer-col-heading">'
                 . $this->qam_lang('fb_like_box_heading') . '</h3>';
         $fb_like_box .= '<div class="fb-like-box" '
-                . 'data-href="https://www.facebook.com/q2amarket" '
-                . 'data-height="250" data-colorscheme="dark" '
+                . 'data-href="' . $this->qam_opt('facebook') . '" '
+                . 'data-height="' . $this->qam_opt('fb_height') . '" data-colorscheme="dark" '
                 . 'data-show-faces="true" data-header="false" '
                 . 'data-stream="false" data-show-border="false"></div>';
 
@@ -516,13 +518,13 @@ class qam_flatbox_theme
     {
         $twitter_widget = '<h3 class="qam-footer-col-heading">'
                 . $this->qam_lang('twitter_heading') . '</h3>';
-        $twitter_widget .= '<a class="twitter-timeline"  href="https://twitter.com/Q2AMarket"
-            data-widget-id="362121220734464000"
+        $twitter_widget .= '<a class="twitter-timeline"  href="' . $this->qam_opt('twitter') . '"
+            data-widget-id="' . $this->qam_opt('twitter_widget_id') . '"
             data-theme="dark" 
             data-link-color="#3498db" 
-            height="250"
+            height="' . $this->qam_opt('twitter_height') . '"
             data-chrome="noheader nofooter noborders noscrollbar transparent"            
-            >Tweets by @Q2AMarket</a>';
+            >Tweets by @' . $this->qam_opt('twitter_id') . '</a>';
 
         return $twitter_widget;
     }
