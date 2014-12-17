@@ -1,5 +1,5 @@
 #FlatBox
-###Version 1.0.1-beta
+###Version 1.0.2-beta
 
 ![alt tag](http://s26.postimg.org/4ncojgvgp/Flat_Box_Banner.jpg)
 
@@ -17,6 +17,14 @@ Features
 
 > If you have any issue or query, feel free to post on our support section
 > You also can create an issue on this repository
+
+Changelog 1.0.2-beta
+====================
+- Fixed font issue
+- Removed duplicate Twitter setting form fields
+- Removed unused images
+- Changed theme update link (set it with github repo)
+- Changed plugin update link (set it with github repo)
 
 Changelog 1.0.1-beta
 ====================
