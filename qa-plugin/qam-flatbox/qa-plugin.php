@@ -34,7 +34,7 @@
   Plugin Author URI: http://www.q2amarket.com/
   Plugin License: GPLv3
   Plugin Minimum Question2Answer Version: 1.6
-  Plugin Update Check URI: https://github.com/q2amarket/FlatBox/blob/master/qa-plugin/qam-flatbox/qa-plugin.php
+  Plugin Update Check URI: https://github.com/q2amarket/FlatBox/raw/master/qa-plugin/qam-flatbox/qa-plugin.php
  */
 
 
