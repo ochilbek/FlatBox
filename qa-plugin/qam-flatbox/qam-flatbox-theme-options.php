@@ -6,7 +6,7 @@
   Copyright (C) 2014  Q2A Market <http://www.q2amarket.com>
 
   File:           qam-flatbox-theme-options.php
-  Version:        FlatBox 1.0.1
+  Version:        FlatBox 1.0.2
   Description:    FlatBox theme customization options
 
   This program is free software: you can redistribute it and/or modify
@@ -280,12 +280,6 @@ class qam_flatbox_theme_options
                     'type'  => 'number',
                     'value' => (int) $this->qam_opt('fb_height'),
                     'tags'  => 'NAME="' . $this->prefix . 'fb_height"',
-                ),
-                array(
-                    'label' => qam_lang('twitter'),
-                    'type'  => 'text',
-                    'value' => $this->qam_opt('twitter'),
-                    'tags'  => 'NAME="' . $this->prefix . 'twitter"',
                 ),
                 array(
                     'label' => qam_lang('twitter'),

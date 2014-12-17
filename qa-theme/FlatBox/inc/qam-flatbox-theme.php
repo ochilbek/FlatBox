@@ -6,7 +6,7 @@
   Copyright (C) 2014  Q2A Market <http://www.q2amarket.com>
 
   File:           inc/qam-flatbox-theme.php
-  Version:        FlatBox 1.0.1
+  Version:        FlatBox 1.0.2
   Description:    FlatBox theme core class
 
   This program is free software: you can redistribute it and/or modify

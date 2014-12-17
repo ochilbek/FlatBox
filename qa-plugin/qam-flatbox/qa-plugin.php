@@ -6,7 +6,7 @@
   Copyright (C) 2014  Q2A Market <http://www.q2amarket.com>
 
   File:           qa-plugin.php
-  Version:        FlatBox 1.0.1
+  Version:        FlatBox 1.0.2
   Description:    FlatBox theme plugin registration
 
   This program is free software: you can redistribute it and/or modify
@@ -28,13 +28,13 @@
   Plugin Name: FlatBox Theme
   Plugin URI: http://store.q2amarket.com/q2a-free-themes/flatbox
   Plugin Description: FlatBox Theme by Q2A Market Settings
-  Plugin Version: 1.0.1
-  Plugin Date: 2014-11-02
+  Plugin Version: 1.0.2
+  Plugin Date: 2014-12-17
   Plugin Author: Q2A Market
   Plugin Author URI: http://www.q2amarket.com/
   Plugin License: GPLv3
   Plugin Minimum Question2Answer Version: 1.6
-  Plugin Update Check URI: http://q2amarket.com/meta/update/plugins/flatbox/qa-plugin.php
+  Plugin Update Check URI: https://github.com/q2amarket/FlatBox/blob/master/qa-plugin/qam-flatbox/qa-plugin.php
  */
 
 

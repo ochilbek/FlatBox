@@ -6,7 +6,7 @@
   Copyright (C) 2014  Q2A Market <http://www.q2amarket.com>
 
   File:           qa-theme.php
-  Version:        FlatBox 1.0.1
+  Version:        FlatBox 1.0.2
   Description:    Q2A theme class
 
   This program is free software: you can redistribute it and/or modify
@@ -101,8 +101,9 @@ class qa_html_theme extends qa_html_theme_base
         $styles = $flatbox->theme_css;
 
         foreach ($styles as $style)
-        {
-            $this->content['css_src'][] = $this->rooturl . $style . '.css?' . $flatbox->flatbox_version;
+        {            
+            $rooturl = (strpos($style, 'Ubuntu') ? NULL : $this->rooturl);
+            $this->content['css_src'][] = $rooturl . $style . '.css?' . $flatbox->flatbox_version;
         }
         qa_html_theme_base::head_css();
 
