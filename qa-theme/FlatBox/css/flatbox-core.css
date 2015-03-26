@@ -6779,3 +6779,7 @@ and open the template in the editor.
     float: right;
   }
 }
+
+a.qa-nav-cat-link.qa-nav-cat-selected {
+    font-size: 22px;
+}
