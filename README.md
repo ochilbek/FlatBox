@@ -41,3 +41,7 @@ Changelog 1.0.1-beta
 
 [Q2A Market]: http://www.q2amarket.com
 [Question2Answer]: http://www.question2answer.org
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/q2amarket/flatbox/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
