@@ -1,3 +1,5 @@
+sudo: false
+
 # Required to run your project under the correct environment.
 language: php
 
@@ -7,7 +9,7 @@ php:
   - 5.5
   - 5.6
   - hhvm
-  
+
 # Commands you want to run that will verify your build.
 script: phpunit
 
